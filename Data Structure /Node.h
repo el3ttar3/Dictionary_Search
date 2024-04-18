@@ -1,6 +1,4 @@
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H
-
+#pragma once
 #include <iostream>
 
 struct Node {
@@ -21,4 +19,3 @@ struct Node {
     int search(int val, Node* head);
 };
 
-#endif 
