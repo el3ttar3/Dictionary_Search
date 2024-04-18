@@ -1,4 +1,4 @@
-#include "LinkedList.h"
+#include "Node.h"
 
 // Constructor definition
 Node::Node(int value) { val = value; }
