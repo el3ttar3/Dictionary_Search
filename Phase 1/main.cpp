@@ -10,7 +10,7 @@ int main() {
     std::string wordtosearch, firstanswer;
     char keychar;
 
-    std::ifstream file("C:\\Users\\Ashraf\\CLionProjects\\Phase 1\\testcase.txt");
+    std::ifstream file("testcase.txt");
     if (file.is_open()) {
         std::string word;
         while (getline(file, word)) { list.insert_end(word); }
