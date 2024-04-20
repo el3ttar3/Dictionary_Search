@@ -51,12 +51,3 @@ void Node::backward_rec_print(Node* goal) {
     std::cout << goal->val << " -> ";
     backward_rec_print(goal->prev); 
 }
-
-// Search function return 1 if exist else -1 
-int Node::search(int val, Node* head) {
-    while (head != nullptr) {
-        if (head->val == val) { return 1;  }
-        head = head->next;
-    }
-    return -1; 
-}
