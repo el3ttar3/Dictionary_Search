@@ -1,16 +1,35 @@
 #include<iostream>
-#include"Node.h"
+#include"LinkedList.h"
 
-class LinkedList{
+LinkedList::LinkedList() {head {nullptr} ; }
 
-private:
-  Node*head;
+void insert_end(const std::string sample){  
+  Node*newInserted=New Node(sample);
+  Node*tempfetcher=head;
+  if (head==nullptr){ head=newInserted; }
+  while(tempfetcher->next!=nullptr){ tempfetcher=tempfetcher->next; }
+  tempfetcher->next=newInserted;
+  newInserted->next=nullptr;
+}
 
-public:
+bool search(const std::string &prefix){
+  bool Flag{false};
+  while (head!=nullptr){
+    if (head->val == prefix ) {
+      Flag=true;
+      break;
+    }
+    head=head->next;
+  }
+  return Flag;
+}
 
-  LinkedList();
-  void insert_end(const std::string sample);
-  void search(const std::string &prefix);
-  void start_with(const char keychar );
+Vector start_with(const char keychar ){
+  Vector result;
+  while (head!=nullptr){
+    if (head->val [0] == char ) {result.pushbackV3(head->val)}
+    head=head->next;
+  }
+  return result;
+}
 
-};
