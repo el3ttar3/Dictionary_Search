@@ -22,13 +22,26 @@ void Vector::pushbackV1(int val) {
 void Vector::pushbackV2(int val) {
     int newsize = size + 1;
     int* temparr = new int[newsize];
-    for (int i{ 0 }; i < size; i++) {
-        temparr[i] = arr[i];
-    }
+    
+    for (int i{ 0 }; i < size; i++) { temparr[i] = arr[i]; }
     temparr[size] = val;
+    
     std::swap(arr, temparr);
     delete[] temparr;
 }
+
+void Vector::push_back(int val) {
+        if (size == capacity) {
+            capacity *= 2;
+            int* newArr = new int[capacity];
+
+            for (int i = 0; i < size; ++i) { newArr[i] = arr[i]; }
+            
+            std::swap(arr, newArr);
+            delete[] newArr;
+        }
+        arr[size++] = val;
+    }
 
 int Vector::getValue(int idx) { return (0 <= idx && idx < size) ? arr[idx] : -1; }
 
