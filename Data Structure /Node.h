@@ -16,6 +16,5 @@ struct Node {
     void backward_for_print(Node* start, Node* head);
     void backward_rec_print(Node* goal);
 
-    int search(int val, Node* head);
 };
 
