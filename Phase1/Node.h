@@ -21,9 +21,7 @@ struct Node {
 
     // Forward view printing function (for)
     void forward_for_print(Node* head) {
-        for (Node* curr = head; curr != nullptr; curr = curr->next) {
-            std::cout << curr->val << " -> ";
-        }
+        for (Node* curr = head; curr != nullptr; curr = curr->next) { std::cout << curr->val << " -> "; }
         std::cout << " nullptr " << std::endl;
     }
 
@@ -48,9 +46,7 @@ struct Node {
 
     // Backward view printing function (for)
     void backward_for_print(Node* start, Node* head) {
-        for (; start != head; start = start->prev) {
-            std::cout << start->val << " -> ";
-        }
+        for (; start != head; start = start->prev) { std::cout << start->val << " -> "; }
         std::cout << start->val << " -> nullptr " << std::endl;
     }
 
