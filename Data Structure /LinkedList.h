@@ -10,7 +10,7 @@ private:
 public:
   LinkedList();
   void insert_end(const std::string sample);
-  void search(const std::string &prefix);
+  bool search(const std::string &prefix);
   Vector start_with(const char keychar );
 
 };
