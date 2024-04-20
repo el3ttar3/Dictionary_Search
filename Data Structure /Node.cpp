@@ -1,7 +1,7 @@
 #include "Node.h"
 
 // Constructor 
-Node::Node(int value) { val = value; }
+Node::Node(std::string value) { val = value; }
 
 // Forward view printing function (while)
 void Node::forward_while_print(Node* head) {
