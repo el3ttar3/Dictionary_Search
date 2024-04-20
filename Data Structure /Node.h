@@ -2,11 +2,11 @@
 #include <iostream>
 
 struct Node {
-    int val;      // Value stored in the node
+    std::string val;  // Value stored in the node
     Node* next;  // Pointer to the next node
     Node* prev;  // Pointer to the previous node
 
-    Node(int value);
+    Node(std::string value);
 
     void forward_while_print(Node* head);
     void forward_for_print(Node* head);
