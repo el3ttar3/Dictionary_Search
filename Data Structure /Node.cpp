@@ -1,6 +1,6 @@
 #include "Node.h"
 
-// Constructor definition
+// Constructor 
 Node::Node(int value) { val = value; }
 
 // Forward view printing function (while)
@@ -48,8 +48,8 @@ void Node::backward_for_print(Node* start, Node* head) {
 // Backward view printing function (recursion)
 void Node::backward_rec_print(Node* goal) {
     if (goal == nullptr) { return; }
-    backward_rec_print(goal->next);
     std::cout << goal->val << " -> ";
+    backward_rec_print(goal->prev); 
 }
 
 // Search function return 1 if exist else -1 
