@@ -14,6 +14,7 @@ public:
     void addSize();
     void pushbackV1(int val);
     void pushbackV2(int val);
+    void pushbackV3(int val);
     int getValue(int idx);
     int getFront();
     int getBack();
