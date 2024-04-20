@@ -5,18 +5,17 @@ template<typename T>
 LinkedList<T>::LinkedList() : head(nullptr) {}
 
 template<typename T>
-void LinkedList<T>::insert_end(const std::string& sample) {
+void LinkedList<T>::insert_end(const std::string& sample) {    
     Node<T>* newInserted = new Node<T>(sample);
     Node<T>* tempfetcher = head;
-    if (head == nullptr) {
-        head = newInserted;
-    }
+    
+    if (head == nullptr) { head = newInserted; }
+    
     else {
-        while (tempfetcher->next != nullptr) {
-            tempfetcher = tempfetcher->next;
-        }
+        while (tempfetcher->next != nullptr) { tempfetcher = tempfetcher->next; }
         tempfetcher->next = newInserted;
     }
+    
     newInserted->next = nullptr;
 }
 
